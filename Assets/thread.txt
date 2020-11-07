@@ -1,0 +1,121 @@
+
+		
+// while , do while, for , for-each
+class Demo{
+	public static void main(String[] args) {
+		while(true)
+		{
+			System.out.println("hola");
+		}
+	}
+}
+////////////////////////////////////////////////////////////
+		
+
+class Demo{
+	public static void main(String[] args) {
+		int i=1;
+		while(i<=5)
+		{
+			System.out.println("hola");
+			i++;      // i= i+1
+		}
+	}
+}
+
+///////////////////////////////////////////////////////////
+		
+			class Demo{
+				public static void main(String[] args) {
+					int i=1;
+					do
+					{
+						System.out.println("hola");
+						i++;
+					}while(i<=5);
+				}
+			}
+
+
+		import java.util.*;
+		class Demo{
+			public static void printTotal(int a, int b){
+				int tot = a+b;
+				System.out.println(a+"+"+b+"="+tot);
+			}
+			public static void main(String[] args) {
+				Scanner input = new Scanner(System.in);
+				System.out.println("input number 1");
+				int num1 = input.nextInt();
+				System.out.println("input number 2");
+				int num2 = input.nextInt();
+
+				printTotal(num2,num1);
+			}
+
+			
+		}
+
+				import java.util.*;
+				class Demo{
+					public static void studentAverage(double avg){
+						System.out.println(avg>50 ? "pass":"fail");
+
+					}
+					public static void main(String[] args) {
+						Scanner input = new Scanner(System.in);
+						System.out.println("input number ");
+						double avg = input.nextInt();
+
+						studentAverage(avg);
+						studentAverage(29);
+					}
+				}
+							import java.util.*;
+							class Demo{
+								public static void main(String[] args) {
+									Scanner input = new Scanner(System.in);
+									System.out.println("input integer");
+									int num = input.nextInt();
+									if (num%2==0) {
+										System.out.println(num+"is even");
+									}else {
+										System.out.println(num+"is odd");
+									}
+								}
+							}
+
+
+
+class A extends Thread{
+	public  void run(){
+		for (int i=0;i<5 ;i++ ) {
+			System.out.println("heelo A");
+			try{Thread.sleep(1000);
+				}catch(Exception e){}
+		}
+	}
+}
+
+class B extends Thread{
+	public void run(){
+		for (int i=0;i<5 ;i++ ) {
+			System.out.println("hii B");
+			try{
+				Thread.sleep(1000);
+				}catch(Exception e){}
+		}
+	}
+}
+
+class  Demo{
+	public static void main(String[] args) {
+		A obj = new A();
+		B obj1= new B();
+
+	 obj.start();
+        try{Thread.sleep(500);
+			}catch(Exception e){}
+        obj1.start();
+	}
+}
